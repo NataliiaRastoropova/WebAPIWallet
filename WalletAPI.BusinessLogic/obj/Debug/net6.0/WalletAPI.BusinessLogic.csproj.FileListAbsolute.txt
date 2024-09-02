@@ -1,0 +1,17 @@
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/bin/Debug/net6.0/WalletAPI.BusinessLogic.deps.json
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/bin/Debug/net6.0/WalletAPI.BusinessLogic.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/bin/Debug/net6.0/WalletAPI.BusinessLogic.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/bin/Debug/net6.0/WalletAPI.DataAccess.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/bin/Debug/net6.0/WalletAPI.Infrastructure.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/bin/Debug/net6.0/WalletAPI.DataAccess.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/bin/Debug/net6.0/WalletAPI.Infrastructure.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/WalletAPI.BusinessLogic.csproj.AssemblyReference.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/WalletAPI.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/WalletAPI.BusinessLogic.AssemblyInfoInputs.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/WalletAPI.BusinessLogic.AssemblyInfo.cs
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/WalletAPI.BusinessLogic.csproj.CoreCompileInputs.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/WalletAPI.BusinessLogic.csproj.CopyComplete
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/WalletAPI.BusinessLogic.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/refint/WalletAPI.BusinessLogic.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/WalletAPI.BusinessLogic.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/ref/WalletAPI.BusinessLogic.dll

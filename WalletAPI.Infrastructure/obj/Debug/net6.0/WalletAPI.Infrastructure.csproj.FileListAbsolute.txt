@@ -1,0 +1,12 @@
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/bin/Debug/net6.0/WalletAPI.Infrastructure.deps.json
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/bin/Debug/net6.0/WalletAPI.Infrastructure.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/bin/Debug/net6.0/WalletAPI.Infrastructure.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/WalletAPI.Infrastructure.csproj.AssemblyReference.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/WalletAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/WalletAPI.Infrastructure.AssemblyInfoInputs.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/WalletAPI.Infrastructure.AssemblyInfo.cs
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/WalletAPI.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/WalletAPI.Infrastructure.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/refint/WalletAPI.Infrastructure.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/WalletAPI.Infrastructure.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/ref/WalletAPI.Infrastructure.dll

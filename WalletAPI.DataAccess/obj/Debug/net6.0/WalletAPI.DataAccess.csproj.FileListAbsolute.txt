@@ -1,0 +1,15 @@
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/bin/Debug/net6.0/WalletAPI.DataAccess.deps.json
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/bin/Debug/net6.0/WalletAPI.DataAccess.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/bin/Debug/net6.0/WalletAPI.DataAccess.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/bin/Debug/net6.0/WalletAPI.Infrastructure.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/bin/Debug/net6.0/WalletAPI.Infrastructure.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/obj/Debug/net6.0/WalletAPI.DataAccess.csproj.AssemblyReference.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/obj/Debug/net6.0/WalletAPI.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/obj/Debug/net6.0/WalletAPI.DataAccess.AssemblyInfoInputs.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/obj/Debug/net6.0/WalletAPI.DataAccess.AssemblyInfo.cs
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/obj/Debug/net6.0/WalletAPI.DataAccess.csproj.CoreCompileInputs.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/obj/Debug/net6.0/WalletAPI.DataAccess.csproj.CopyComplete
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/obj/Debug/net6.0/WalletAPI.DataAccess.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/obj/Debug/net6.0/refint/WalletAPI.DataAccess.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/obj/Debug/net6.0/WalletAPI.DataAccess.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/obj/Debug/net6.0/ref/WalletAPI.DataAccess.dll

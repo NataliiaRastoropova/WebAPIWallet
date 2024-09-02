@@ -1,0 +1,89 @@
+using WalletAPI.BusinessLogic.Contracts;
+using WalletAPI.BusinessLogic.Dtos;
+using WalletAPI.DataAccess.Entities;
+using WalletAPI.DataAccess.Repositories.Account;
+
+namespace WalletAPI.BusinessLogic.Services;
+
+public class TransactionService : ITransactionService
+{
+    private readonly ITransactionRepository _transactionRepository;
+    private readonly IAccountRepository _accountRepository;
+
+    public TransactionService(ITransactionRepository transactionRepository, IAccountRepository accountRepository)
+    {
+        _transactionRepository = transactionRepository;
+        _accountRepository = accountRepository;
+    }
+
+    public async Task<IReadOnlyList<TransactionDto>> Get()
+    {
+        var transactions = await _transactionRepository.Get();
+        if (transactions == null)
+            return new List<TransactionDto>();
+        
+        return  transactions.Select(e => new TransactionDto(
+                e.Id, e.Amount, e.AccountId, e.TransactionType, e.LastModified)).ToList().AsReadOnly();
+    }
+    
+    public async Task<TransactionDto> Get(string id)
+    {
+        var transaction = await _transactionRepository.Get(id);
+        if (transaction == null)
+            return TransactionDto.Default;
+
+        return new TransactionDto(transaction.Id, transaction.Amount, 
+            transaction.AccountId, transaction.TransactionType, transaction.LastModified);
+    }
+    
+    public async Task<IReadOnlyList<TransactionDto>> GetTodayTransactions()
+    {
+        var transactions = await _transactionRepository.Get(t 
+            => t.LastModified.Date == DateTime.UtcNow.Date);
+        if (transactions == null)
+            return new List<TransactionDto>();
+        
+        return  transactions.Select(e => new TransactionDto(
+            e.Id, e.Amount, e.AccountId, e.TransactionType, e.LastModified)).ToList().AsReadOnly();
+    }
+
+    public async Task Create(TransactionDto transaction)
+    {
+        if (transaction != TransactionDto.Default)
+        {
+            var account = await _accountRepository.Get(transaction.AccountId);
+
+            if (account == null)
+                throw new ArgumentNullException($"Account not found by id={transaction.AccountId}");
+            
+            await _transactionRepository.Create(new TransactionEntity
+                {
+                    Id = transaction.Id,
+                    Amount = transaction.Amount,
+                    AccountId = transaction.AccountId,
+                    TransactionType = transaction.Type,
+                    LastModified = transaction.LastModified
+                });
+
+            switch (transaction.Type)
+            {
+                case TransactionType.Income:
+                    account.Amount += transaction.Amount;
+                    break;
+                case TransactionType.Outcome:
+                    account.Amount -= transaction.Amount;
+                    break;
+            }
+
+            await _accountRepository.Update(account);
+        }
+    }
+
+    public async Task Remove(string id)
+    {
+        if (string.IsNullOrEmpty(id)) 
+            throw new ArgumentNullException();
+        
+        await _transactionRepository.Delete(id);
+    }
+}
