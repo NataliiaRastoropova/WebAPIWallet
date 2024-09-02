@@ -1,8 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using WalletAPI.BusinessLogic.Contracts;
-using WalletAPI.BusinessLogic.Dtos;
 using WalletAPI.DataAccess.Entities;
-using WalletAPI.Models.Transactions;
 
 namespace WalletAPI.Controllers;
 
@@ -10,92 +7,92 @@ namespace WalletAPI.Controllers;
 [Route("[controller]")]
 public class TransactionsController : ControllerBase
 {
-    private readonly ILogger<TransactionsController> _logger;
-    private readonly ITransactionService _transactionService;
+    private readonly ILogger<TransactionsController> _lg;
+    private readonly WalletContext _context = new WalletContext();
 
-    public TransactionsController(ILogger<TransactionsController> logger, ITransactionService transactionService)
+    public TransactionsController(ILogger<TransactionsController> log)
     {
-        _logger = logger;
-        _transactionService = transactionService;
+        _lg = log;
     }
     
     [HttpGet("get", Name = "GetTransaction")]
-    public async Task<ActionResult<IEnumerable<TransactionDto>>> GetTransaction()
+    public IEnumerable<TransactionEntity> GetTransaction()
     {
         try
         {
-            var result = await _transactionService.Get();
-            return Ok(result);
+            return _context.Transactions.ToList();
         }
         catch (Exception e)
         {
-            _logger.LogError(e,$"Failed to fetch transactions");
-            return BadRequest();
+            _lg.LogError(e,$"Failed to fetch transactions");
+            return null;
         }
     }
     
     [HttpGet("getById/{id}", Name = "GetTransactionById")]
-    public async Task<ActionResult<TransactionDto>> GetTransactionById([FromRoute] string id)
+    public TransactionEntity GetTransactionById([FromRoute] string id)
     {
         try
         {
-            var result = await _transactionService.Get(id);
-            return Ok(result);
+            return _context.Transactions.First(e => e.Id == id);
         }
         catch (Exception e)
         {
-            _logger.LogError(e,$"Failed to fetch transactions");
-            return BadRequest();
+            _lg.LogError(e,$"Failed to fetch transactions");
+            return new TransactionEntity();
         }
     }
     
     [HttpGet("getTodayTransactions", Name = "GetTodayTransactions")]
-    public async Task<ActionResult<IEnumerable<TransactionDto>>> GetTodayTransactions()
+    public IEnumerable<TransactionEntity> GetTodayTransactions()
     {
         try
         {
-            var result = await _transactionService.GetTodayTransactions();
-            return Ok(result);
+            return _context.Transactions.Where( t => t.LastModified.Date == DateTime.UtcNow.Date);
         }
         catch (Exception e)
         {
-            _logger.LogError(e,$"Failed to fetch transactions");
-            return BadRequest();
+            _lg.LogError(e,$"Failed to fetch transactions");
+            return null;
         }
     }
 
     [HttpPost("addTransaction", Name = "AddTransaction")]
-    public async Task<ActionResult> Add([FromBody] CreateTransactionRequest request)
+    public void Add([FromBody] TransactionEntity request)
     {
-        var entity = new TransactionDto(Guid.NewGuid().ToString(), request.Amount,
-            request.AccountId, request.Type, DateTime.UtcNow);
+        var entity = new TransactionEntity
+        {
+            Id = request.Id,
+            Amount = request.Amount,
+            LastModified = request.LastModified,
+            AccountId = request.AccountId,
+            TransactionType = request.TransactionType
+        };
         try
         {
-            
-            await _transactionService.Create(entity);
-            _logger.LogInformation($"Transaction {entity.Id} successfully created");
-            return Ok();
+            _context.Transactions.Add(entity);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, $"Failed to create transaction with id={entity.Id}");
-            return BadRequest();
+            _lg.LogError(ex, $"Failed to create transaction with id={entity.Id}");
         }
     }
 
     [HttpDelete]
-    public async Task<ActionResult> Remove(string id)
+    public void Remove(string id)
     {
         try 
         {
-            await _transactionService.Remove(id);
-            _logger.LogInformation($"Transaction {id} successfully deleted");
-            return Ok();
+            var entity = _context.Transactions.FirstOrDefault(e => e.Id == id);
+            if (entity != null)
+            {
+                _context.Transactions.Remove(entity);
+            }
+            _lg.LogInformation($"Transaction {id} successfully deleted");
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, $"Failed to delete transaction with id={id}");
-            return BadRequest();
+            _lg.LogError(ex, $"Failed to delete transaction with id={id}");
         }
     }
 }

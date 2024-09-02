@@ -1,10 +1,10 @@
 namespace WalletAPI.DataAccess.Entities;
 
-public class AccountEntity
+public class TransactionEntity
 {
     public string Id { get; init; }
     public decimal Amount { get; set; }
-    public AccountType Type { get; set; }
-    public CurrencyType Currency { get; set; }
     public DateTime LastModified { get; set; }
+    public string AccountId { get; set; }
+    public string TransactionType { get; set; }
 }

@@ -41,16 +41,6 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
-      },
-      "WalletAPI.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/WalletAPI.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WalletAPI.Infrastructure.dll": {}
-        }
       }
     }
   },
@@ -129,17 +119,11 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "WalletAPI.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../WalletAPI.Infrastructure/WalletAPI.Infrastructure.csproj",
-      "msbuildProject": "../WalletAPI.Infrastructure/WalletAPI.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.Extensions.DependencyInjection >= 6.0.1",
-      "WalletAPI.Infrastructure >= 1.0.0"
+      "Microsoft.Extensions.DependencyInjection >= 6.0.1"
     ]
   },
   "packageFolders": {
@@ -166,11 +150,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/WalletAPI.Infrastructure.csproj": {
-              "projectPath": "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/WalletAPI.Infrastructure.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

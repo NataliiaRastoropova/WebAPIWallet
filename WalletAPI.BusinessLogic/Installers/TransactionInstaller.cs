@@ -1,7 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Services;
-using WalletAPI.DataAccess.Repositories.Account;
 
 namespace WalletAPI.BusinessLogic.Installers;
 

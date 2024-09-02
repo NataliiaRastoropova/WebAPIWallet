@@ -2,12 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletAPI", "WalletAPI\WalletAPI.csproj", "{AC1A8205-DDDA-4ADD-B515-BEE8CD399517}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletAPI.DataAccess", "WalletAPI.DataAccess\WalletAPI.DataAccess.csproj", "{E9CD6F9B-F47F-4E8D-99DD-41061390261B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletAPI.BusinessLogic", "WalletAPI.BusinessLogic\WalletAPI.BusinessLogic.csproj", "{67B380E6-7C0A-44AB-83B3-1DCBF8F15702}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletAPI.Infrastructure", "WalletAPI.Infrastructure\WalletAPI.Infrastructure.csproj", "{5ED13EF7-A5C6-4A6D-B971-240DB8C68277}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,17 +12,5 @@ Global
 		{AC1A8205-DDDA-4ADD-B515-BEE8CD399517}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC1A8205-DDDA-4ADD-B515-BEE8CD399517}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC1A8205-DDDA-4ADD-B515-BEE8CD399517}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9CD6F9B-F47F-4E8D-99DD-41061390261B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9CD6F9B-F47F-4E8D-99DD-41061390261B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9CD6F9B-F47F-4E8D-99DD-41061390261B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9CD6F9B-F47F-4E8D-99DD-41061390261B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67B380E6-7C0A-44AB-83B3-1DCBF8F15702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67B380E6-7C0A-44AB-83B3-1DCBF8F15702}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67B380E6-7C0A-44AB-83B3-1DCBF8F15702}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67B380E6-7C0A-44AB-83B3-1DCBF8F15702}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5ED13EF7-A5C6-4A6D-B971-240DB8C68277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5ED13EF7-A5C6-4A6D-B971-240DB8C68277}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5ED13EF7-A5C6-4A6D-B971-240DB8C68277}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5ED13EF7-A5C6-4A6D-B971-240DB8C68277}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

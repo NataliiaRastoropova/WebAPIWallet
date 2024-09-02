@@ -1,5 +1,4 @@
 using System.Collections.ObjectModel;
-using WalletAPI.DataAccess.Entities;
 
 namespace WalletAPI.DataAccess.Repositories.Account;
 
