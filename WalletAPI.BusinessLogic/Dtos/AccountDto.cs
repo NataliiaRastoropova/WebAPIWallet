@@ -3,7 +3,7 @@ using WalletAPI.DataAccess.Entities;
 
 namespace WalletAPI.BusinessLogic.Dtos;
 
-public class AccountDto : IEquatable<AccountDto>
+public sealed class AccountDto : IEquatable<AccountDto>
 {
     public static readonly AccountDto Default
         = new AccountDto(string.Empty, Decimal.Zero, AccountType.None, CurrencyType.USD, DateTime.MinValue);

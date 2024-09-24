@@ -3,7 +3,7 @@ using WalletAPI.DataAccess.Entities;
 
 namespace WalletAPI.DataAccess.Repositories.Account;
 
-public class AccountRepository : IAccountRepository
+public sealed class AccountRepository : IAccountRepository
 {
     private readonly WalletContext _context;
 
@@ -53,4 +53,5 @@ public class AccountRepository : IAccountRepository
         }
         return Task.CompletedTask;
     }
+    
 }

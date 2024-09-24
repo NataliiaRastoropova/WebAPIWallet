@@ -1,7 +1,9 @@
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Dtos;
+using WalletAPI.DataAccess;
 using WalletAPI.DataAccess.Entities;
 using WalletAPI.DataAccess.Repositories.Account;
+using WalletAPI.DataAccess.Repositories.Factory;
 
 namespace WalletAPI.BusinessLogic.Services;
 
@@ -9,9 +11,13 @@ public class AccountService : IAccountService
 {
     private readonly IAccountRepository _accountRepository;
 
-    public AccountService(IAccountRepository accountRepository)
+    // public AccountService(IAccountRepository accountRepository)
+    public AccountService(WalletContext context)
     {
-        _accountRepository = accountRepository;
+        // _accountRepository = accountRepository;
+        
+        IRepositoryFactory factory = RepositoryFactory.Instance();
+        _accountRepository = (IAccountRepository)factory.Instantiate<AccountEntity>(context);
     }
     
     public async Task<IReadOnlyList<AccountDto>> Get()

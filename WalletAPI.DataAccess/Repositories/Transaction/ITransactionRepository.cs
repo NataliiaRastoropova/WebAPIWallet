@@ -3,7 +3,7 @@ using WalletAPI.DataAccess.Entities;
 
 namespace WalletAPI.DataAccess.Repositories.Account;
 
-public interface ITransactionRepository
+public interface ITransactionRepository : IRepository<TransactionEntity>
 {
     public Task<ReadOnlyCollection<TransactionEntity>> Get();
     public Task<TransactionEntity?> Get(string id);

@@ -2,7 +2,7 @@ using WalletAPI.DataAccess.Entities;
 
 namespace WalletAPI.BusinessLogic.Dtos;
 
-public class TransactionDto: IEquatable<TransactionDto>
+public sealed class TransactionDto: IEquatable<TransactionDto>
 {
     public static readonly TransactionDto Default
         = new TransactionDto(string.Empty, Decimal.Zero, String.Empty, Decimal.Zero, DateTime.MinValue);
