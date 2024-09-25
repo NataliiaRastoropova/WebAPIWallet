@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using WalletAPI.BusinessLogic.Builder;
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Services;
 
@@ -8,7 +9,9 @@ public static class AccountInstaller
 {
     public static IServiceCollection AddAccounts(this IServiceCollection services)
     {
-        services.AddScoped<IAccountService, AccountService>();
+        services.AddScoped<IAccountService, AccountService>()
+            .AddScoped<IAccountBuilder, AccountBuilder>();
+        
         return services;
     }
     

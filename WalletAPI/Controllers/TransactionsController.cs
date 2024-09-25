@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Dtos;
-using WalletAPI.DataAccess.Entities;
+using WalletAPI.Infrastructure.Enums;
 using WalletAPI.Models.Transactions;
 
 namespace WalletAPI.Controllers;
@@ -12,15 +12,36 @@ public class TransactionsController : ControllerBase
 {
     private readonly ILogger<TransactionsController> _logger;
     private readonly ITransactionService _transactionService;
+    private readonly ITransactionsSync _transactionsSync;
 
-    public TransactionsController(ILogger<TransactionsController> logger, ITransactionService transactionService)
+    public TransactionsController(ILogger<TransactionsController> logger, 
+        ITransactionService transactionService,
+        ITransactionsSync transactionsSync)
     {
         _logger = logger;
         _transactionService = transactionService;
+        _transactionsSync = transactionsSync;
     }
     
+    [HttpGet("GetTransactionByBank", Name = "GetTransactionByBank")]
+    public ActionResult<IEnumerable<Transaction>> GetTransactionByBank()
+    {
+        try
+        {
+            _transactionsSync.GetTransactionsByBank(BankType.Mono,
+                DateTime.Today, DateTime.Today.AddDays(10));
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e,$"Failed to fetch transactions by bank");
+            return BadRequest();
+        }
+    }
+    
+    
     [HttpGet("get", Name = "GetTransaction")]
-    public async Task<ActionResult<IEnumerable<TransactionDto>>> GetTransaction()
+    public async Task<ActionResult<IEnumerable<Transaction>>> GetTransaction()
     {
         try
         {
@@ -35,7 +56,7 @@ public class TransactionsController : ControllerBase
     }
     
     [HttpGet("getById/{id}", Name = "GetTransactionById")]
-    public async Task<ActionResult<TransactionDto>> GetTransactionById([FromRoute] string id)
+    public async Task<ActionResult<Transaction>> GetTransactionById([FromRoute] string id)
     {
         try
         {
@@ -50,7 +71,7 @@ public class TransactionsController : ControllerBase
     }
     
     [HttpGet("getTodayTransactions", Name = "GetTodayTransactions")]
-    public async Task<ActionResult<IEnumerable<TransactionDto>>> GetTodayTransactions()
+    public async Task<ActionResult<IEnumerable<Transaction>>> GetTodayTransactions()
     {
         try
         {
@@ -67,7 +88,7 @@ public class TransactionsController : ControllerBase
     [HttpPost("addTransaction", Name = "AddTransaction")]
     public async Task<ActionResult> Add([FromBody] CreateTransactionRequest request)
     {
-        var entity = new TransactionDto(Guid.NewGuid().ToString(), request.Amount,
+        var entity = new Transaction(Guid.NewGuid().ToString(), request.Amount,
             request.AccountId, request.Type, DateTime.UtcNow);
         try
         {

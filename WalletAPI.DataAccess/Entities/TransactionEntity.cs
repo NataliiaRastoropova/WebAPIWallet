@@ -1,3 +1,5 @@
+using WalletAPI.Infrastructure.Enums;
+
 namespace WalletAPI.DataAccess.Entities;
 
 public class TransactionEntity : BaseEntity

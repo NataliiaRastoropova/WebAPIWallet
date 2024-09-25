@@ -1,11 +1,12 @@
 using WalletAPI.DataAccess.Entities;
+using WalletAPI.Infrastructure.Enums;
 
 namespace WalletAPI.BusinessLogic.Dtos;
 
-public sealed class TransactionDto: IEquatable<TransactionDto>
+public sealed class Transaction: IEquatable<Transaction>
 {
-    public static readonly TransactionDto Default
-        = new TransactionDto(string.Empty, Decimal.Zero, String.Empty, Decimal.Zero, DateTime.MinValue);
+    public static readonly Transaction Default
+        = new Transaction(string.Empty, Decimal.Zero, String.Empty, Decimal.Zero, DateTime.MinValue);
     
     public string Id { get; }
     public decimal Amount { get; }
@@ -13,7 +14,7 @@ public sealed class TransactionDto: IEquatable<TransactionDto>
     public string AccountId { get; init;}
     public DateTime LastModified { get; }
 
-    public TransactionDto(string id, decimal amount, string accountId, TransactionType type, DateTime lastModified)
+    public Transaction(string id, decimal amount, string accountId, TransactionType type, DateTime lastModified)
     {
         Id = id;
         Amount = amount;
@@ -22,7 +23,7 @@ public sealed class TransactionDto: IEquatable<TransactionDto>
         LastModified = lastModified;
     }
     
-    public bool Equals(TransactionDto? other)
+    public bool Equals(Transaction? other)
     {
         if (other == null)
             return false;

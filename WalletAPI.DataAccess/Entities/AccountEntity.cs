@@ -1,3 +1,5 @@
+using WalletAPI.Infrastructure.Enums;
+
 namespace WalletAPI.DataAccess.Entities;
 
 public class AccountEntity : BaseEntity
@@ -6,4 +8,5 @@ public class AccountEntity : BaseEntity
     public AccountType Type { get; set; }
     public CurrencyType Currency { get; set; }
     public DateTime LastModified { get; set; }
+    public BankType BankType { get; set; }
 }

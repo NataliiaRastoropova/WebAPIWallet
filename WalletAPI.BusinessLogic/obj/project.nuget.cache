@@ -1,14 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "H1iiuO4GTcwMDbDLF2Bt/cGrOAlfpC7PXjHUoXrGT3/fm0YV/oVlhhwLo7hcbfRKBbD3nO2yy7RNVxi4tAxUBw==",
+  "dgSpecHash": "i/a+wzk5KsCB0DyJ8gXrv7fdXa5ud+k2Tfpb5R36oPmq564kHEbrM2QaBhLHjSdmSY+zzngGg13NsOOeCdRJnw==",
   "success": true,
   "projectFilePath": "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/WalletAPI.BusinessLogic.csproj",
   "expectedPackageFiles": [
     "/Users/nataliiarastoropova/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.1/microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0-rc.1.24431.7/microsoft.extensions.dependencyinjection.9.0.0-rc.1.24431.7.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0-rc.1.24431.7/microsoft.extensions.dependencyinjection.abstractions.9.0.0-rc.1.24431.7.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.logging/9.0.0-rc.1.24431.7/microsoft.extensions.logging.9.0.0-rc.1.24431.7.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0-rc.1.24431.7/microsoft.extensions.logging.abstractions.9.0.0-rc.1.24431.7.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.options/9.0.0-rc.1.24431.7/microsoft.extensions.options.9.0.0-rc.1.24431.7.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.primitives/9.0.0-rc.1.24431.7/microsoft.extensions.primitives.9.0.0-rc.1.24431.7.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/system.diagnostics.diagnosticsource/9.0.0-rc.1.24431.7/system.diagnostics.diagnosticsource.9.0.0-rc.1.24431.7.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

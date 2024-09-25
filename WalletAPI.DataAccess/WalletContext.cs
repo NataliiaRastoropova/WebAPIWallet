@@ -1,4 +1,5 @@
 using WalletAPI.DataAccess.Entities;
+using WalletAPI.Infrastructure.Enums;
 
 namespace WalletAPI.DataAccess;
 

@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using WalletAPI.BusinessLogic.Builder;
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Dtos;
 using WalletAPI.DataAccess.Entities;
 using WalletAPI.DataAccess.Repositories.Account;
 using WalletAPI.DataAccess.Repositories.Factory;
+using WalletAPI.Infrastructure.Enums;
 using WalletAPI.Models.Accounts;
 
 namespace WalletAPI.Controllers;
@@ -14,15 +16,19 @@ public class AccountController : ControllerBase
 {
     private readonly ILogger<TransactionsController> _logger;
     private readonly IAccountService _accountService;
+    private readonly IAccountBuilder _builder;
 
-    public AccountController(ILogger<TransactionsController> logger, IAccountService accountService)
+    public AccountController(ILogger<TransactionsController> logger, 
+        IAccountService accountService,
+        IAccountBuilder accountBuilder)
     {
         _logger = logger;
         _accountService = accountService;
+        _builder = accountBuilder;
     }
     
     [HttpGet("get", Name = "GetAccount")]
-    public async Task<ActionResult<IEnumerable<AccountDto>>> GetAccount()
+    public async Task<ActionResult<IEnumerable<Account>>> GetAccount()
     {
         try
         {
@@ -37,7 +43,7 @@ public class AccountController : ControllerBase
     }
     
     [HttpGet("getById/{id}", Name = "GetAccountById")]
-    public async Task<ActionResult<TransactionDto>> GetAccountById([FromRoute] string id)
+    public async Task<ActionResult<Transaction>> GetAccountById([FromRoute] string id)
     {
         try
         {
@@ -54,12 +60,13 @@ public class AccountController : ControllerBase
     [HttpPost]
     public async Task<ActionResult> Add([FromBody] CreateAccountRequest request)
     {
-        var entity = new AccountDto(
-            id: Guid.NewGuid().ToString(),
-            amount: request.Amount,
-            type: request.Type,
-            currency: request.Currency,
-            lastModified: DateTime.UtcNow);
+        var entity = _builder
+            .SetBalance(request.Amount)
+            .SetCurrency(request.Currency)
+            .SetType(request.Type)
+            .SetBankIntegration(BankType.None)
+            .SetLastModifiedDate(DateTime.UtcNow)
+            .Build();
         try
         {
             await _accountService.Add(entity);
@@ -76,13 +83,14 @@ public class AccountController : ControllerBase
     [HttpPut]
     public async Task<ActionResult> Update([FromBody] UpdateAccountRequest request)
     {
-        var entity = new AccountDto(
-            id: request.Id,
-            amount: request.Amount,
-            type: request.Type,
-            currency: request.Currency,
-            lastModified: DateTime.UtcNow);
-    
+        var entity = _builder
+            .SetBalance(request.Amount)
+            .SetCurrency(request.Currency)
+            .SetType(request.Type)
+            .SetLastModifiedDate(DateTime.UtcNow)
+            .SetBankIntegration(request.BankType)
+            .Build();
+
         try
         {
             await _accountService.Update(entity);

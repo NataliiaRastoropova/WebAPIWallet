@@ -2,6 +2,7 @@ using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Dtos;
 using WalletAPI.DataAccess.Entities;
 using WalletAPI.DataAccess.Repositories.Account;
+using WalletAPI.Infrastructure.Enums;
 
 namespace WalletAPI.BusinessLogic.Services;
 
@@ -16,40 +17,40 @@ public class TransactionService : ITransactionService
         _accountRepository = accountRepository;
     }
 
-    public async Task<IReadOnlyList<TransactionDto>> Get()
+    public async Task<IReadOnlyList<Transaction>> Get()
     {
         var transactions = await _transactionRepository.Get();
         if (transactions == null)
-            return new List<TransactionDto>();
+            return new List<Transaction>();
         
-        return  transactions.Select(e => new TransactionDto(
+        return  transactions.Select(e => new Transaction(
                 e.Id, e.Amount, e.AccountId, e.TransactionType, e.LastModified)).ToList().AsReadOnly();
     }
     
-    public async Task<TransactionDto> Get(string id)
+    public async Task<Transaction> Get(string id)
     {
         var transaction = await _transactionRepository.Get(id);
         if (transaction == null)
-            return TransactionDto.Default;
+            return Transaction.Default;
 
-        return new TransactionDto(transaction.Id, transaction.Amount, 
+        return new Transaction(transaction.Id, transaction.Amount, 
             transaction.AccountId, transaction.TransactionType, transaction.LastModified);
     }
     
-    public async Task<IReadOnlyList<TransactionDto>> GetTodayTransactions()
+    public async Task<IReadOnlyList<Transaction>> GetTodayTransactions()
     {
         var transactions = await _transactionRepository.Get(t 
             => t.LastModified.Date == DateTime.UtcNow.Date);
         if (transactions == null)
-            return new List<TransactionDto>();
+            return new List<Transaction>();
         
-        return  transactions.Select(e => new TransactionDto(
+        return  transactions.Select(e => new Transaction(
             e.Id, e.Amount, e.AccountId, e.TransactionType, e.LastModified)).ToList().AsReadOnly();
     }
 
-    public async Task Create(TransactionDto transaction)
+    public async Task Create(Transaction transaction)
     {
-        if (transaction != TransactionDto.Default)
+        if (transaction != Transaction.Default)
         {
             var account = await _accountRepository.Get(transaction.AccountId);
 
