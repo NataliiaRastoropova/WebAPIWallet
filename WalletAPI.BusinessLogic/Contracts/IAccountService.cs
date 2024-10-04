@@ -4,9 +4,9 @@ namespace WalletAPI.BusinessLogic.Contracts;
 
 public interface IAccountService
 {
-    Task<IReadOnlyList<AccountDto>> Get();
-    Task<AccountDto> Get(string id);
-    Task Add(AccountDto account);
-    Task Update(AccountDto account);
+    Task<IReadOnlyList<Account>> Get();
+    Task<Account> Get(string id);
+    Task Add(Account account);
+    Task Update(Account account);
     Task Remove(string id);
 }

@@ -33,3 +33,9 @@
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/obj/Debug/net6.0/WalletAPI.genruntimeconfig.cache
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/obj/Debug/net6.0/ref/WalletAPI.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.Extensions.Logging.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.Extensions.Options.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll

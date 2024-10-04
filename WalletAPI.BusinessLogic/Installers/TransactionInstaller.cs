@@ -10,7 +10,8 @@ public static class TransactionInstaller
     public static IServiceCollection AddTransactions(this IServiceCollection services)
     {
         services
-            .AddScoped<ITransactionService, TransactionService>();
+            .AddScoped<ITransactionService, TransactionService>()
+            .AddScoped<ITransactionsSync, TransactionsSync>();
         return services;
     }
 }

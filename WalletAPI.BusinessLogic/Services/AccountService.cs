@@ -1,7 +1,10 @@
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Dtos;
+using WalletAPI.DataAccess;
 using WalletAPI.DataAccess.Entities;
 using WalletAPI.DataAccess.Repositories.Account;
+using WalletAPI.DataAccess.Repositories.Factory;
+using WalletAPI.Infrastructure.Enums;
 
 namespace WalletAPI.BusinessLogic.Services;
 
@@ -9,42 +12,48 @@ public class AccountService : IAccountService
 {
     private readonly IAccountRepository _accountRepository;
 
-    public AccountService(IAccountRepository accountRepository)
+    // public AccountService(IAccountRepository accountRepository)
+    public AccountService(WalletContext context)
     {
-        _accountRepository = accountRepository;
+        // _accountRepository = accountRepository;
+        
+        IRepositoryFactory factory = RepositoryFactory.Instance();
+        _accountRepository = (IAccountRepository)factory.Instantiate<AccountEntity>(context);
     }
     
-    public async Task<IReadOnlyList<AccountDto>> Get()
+    public async Task<IReadOnlyList<Account>> Get()
     {
         var accounts = await _accountRepository.Get();
         if (accounts == null)
-            return new List<AccountDto>();
+            return new List<Account>();
         
-        return  accounts.Select(e => new AccountDto(
+        return  accounts.Select(e => new Account(
             id: e.Id, 
             type: e.Type, 
             amount: e.Amount, 
             currency: e.Currency, 
-            lastModified: e.LastModified)).ToList().AsReadOnly();
+            lastModified: e.LastModified,
+            bankType: e.BankType)).ToList().AsReadOnly();
     }
     
-    public async Task<AccountDto> Get(string id)
+    public async Task<Account> Get(string id)
     {
         var account = await _accountRepository.Get(id);
         if (account == null)
-            return AccountDto.Default;
+            return Account.Default;
 
-        return new AccountDto(
+        return new Account(
             id: account.Id, 
             type: account.Type, 
             amount: account.Amount, 
             currency: account.Currency, 
-            lastModified: account.LastModified);
+            lastModified: account.LastModified,
+            bankType: BankType.PrivateBank);
     }
 
-    public async Task Add(AccountDto account)
+    public async Task Add(Account account)
     {
-        if (account == AccountDto.Default)
+        if (account == Account.Default)
             return;
 
         await _accountRepository.Create(new AccountEntity
@@ -57,9 +66,9 @@ public class AccountService : IAccountService
         });
     }
     
-    public async Task Update(AccountDto account)
+    public async Task Update(Account account)
     {
-        if (account == AccountDto.Default)
+        if (account == Account.Default)
             return;
         
         await _accountRepository.Update(new AccountEntity

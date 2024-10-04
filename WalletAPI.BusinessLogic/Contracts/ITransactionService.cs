@@ -4,9 +4,9 @@ namespace WalletAPI.BusinessLogic.Contracts;
 
 public interface ITransactionService
 {
-    Task<IReadOnlyList<TransactionDto>> Get();
-    Task<TransactionDto> Get(string id);
-    Task<IReadOnlyList<TransactionDto>> GetTodayTransactions();
-    Task Create(TransactionDto transaction);
+    Task<IReadOnlyList<Transaction>> Get();
+    Task<Transaction> Get(string id);
+    Task<IReadOnlyList<Transaction>> GetTodayTransactions();
+    Task Create(Transaction transaction);
     Task Remove(string id);
 }

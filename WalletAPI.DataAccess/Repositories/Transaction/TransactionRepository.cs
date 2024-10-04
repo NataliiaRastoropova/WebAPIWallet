@@ -3,7 +3,7 @@ using WalletAPI.DataAccess.Entities;
 
 namespace WalletAPI.DataAccess.Repositories.Account;
 
-public class TransactionRepository : ITransactionRepository
+public sealed class TransactionRepository : ITransactionRepository
 {
     private readonly WalletContext _context;
 

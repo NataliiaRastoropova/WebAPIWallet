@@ -1,12 +1,14 @@
 using AutoMapper.Internal;
 using WalletAPI.DataAccess.Entities;
+using WalletAPI.Infrastructure.Enums;
 
 namespace WalletAPI.BusinessLogic.Dtos;
 
-public class AccountDto : IEquatable<AccountDto>
+public sealed class Account : IEquatable<Account>
 {
-    public static readonly AccountDto Default
-        = new AccountDto(string.Empty, Decimal.Zero, AccountType.None, CurrencyType.USD, DateTime.MinValue);
+    public static readonly Account Default
+        = new Account(string.Empty, Decimal.Zero, AccountType.None, 
+            CurrencyType.USD, DateTime.MinValue, Infrastructure.Enums.BankType.None);
 
     public string Id { get; }
     public decimal Amount { get; }
@@ -14,16 +16,20 @@ public class AccountDto : IEquatable<AccountDto>
     public CurrencyType Currency { get; }
     public DateTime LastModified { get; }
     
-    public AccountDto(string id, decimal amount, AccountType type, CurrencyType currency, DateTime lastModified)
+    public BankType BankType { get; }
+    
+    public Account(string id, decimal amount, AccountType type, 
+        CurrencyType currency, DateTime lastModified, BankType bankType)
     {
         Id = id;
         Amount = amount;
         Type = type;
         Currency = currency;
         LastModified = lastModified;
+        BankType = bankType;
     }
 
-    public bool Equals(AccountDto? other)
+    public bool Equals(Account? other)
     {
         if (other == null)
             return false;

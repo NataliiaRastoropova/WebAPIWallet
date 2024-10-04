@@ -1,4 +1,4 @@
-namespace WalletAPI.DataAccess.Entities;
+namespace WalletAPI.Infrastructure.Enums;
 
 public enum AccountType : byte
 {

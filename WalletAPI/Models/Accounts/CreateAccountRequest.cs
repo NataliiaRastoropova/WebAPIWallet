@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using WalletAPI.DataAccess.Entities;
+using WalletAPI.Infrastructure.Enums;
 
 namespace WalletAPI.Models.Accounts;
 
