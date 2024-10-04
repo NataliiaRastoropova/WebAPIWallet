@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using WalletAPI.BusinessLogic.Contracts;
+using WalletAPI.BusinessLogic.Decorator;
 using WalletAPI.BusinessLogic.Dtos;
 using WalletAPI.Infrastructure.Enums;
 using WalletAPI.Models.Transactions;
@@ -119,5 +120,22 @@ public class TransactionsController : ControllerBase
             _logger.LogError(ex, $"Failed to delete transaction with id={id}");
             return BadRequest();
         }
+    }
+
+    [HttpPost("decoratorTest", Name = "decoratorTestProcessPayment")]
+    public async Task ProcessPayment()
+    {
+        // Створюємо базовий гаманець
+        IWallet basicWallet = new Wallet();
+
+        // Додаємо логування до гаманця
+        IWallet loggingWallet = new LoggingWalletDecorator(basicWallet, _logger);
+
+        // Додаємо перевірку ліміту та логування
+        IWallet walletWithLimitAndLogging = new LimitCheckWalletDecorator(loggingWallet, 500, _logger);
+
+        // Тестуємо гаманець з обмеженням і логуванням
+        walletWithLimitAndLogging.MakePayment(300); // Допустима сума
+        walletWithLimitAndLogging.MakePayment(600); // Перевищує ліміт
     }
 }

@@ -243,11 +243,22 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "CurrencyExchangeService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CurrencyExchangeService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CurrencyExchangeService.dll": {}
+        }
+      },
       "WalletAPI.BusinessLogic/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper": "13.0.1",
+          "CurrencyExchangeService": "1.0.0",
           "Microsoft.Extensions.Logging": "9.0.0-rc.1.24431.7",
           "WalletAPI.DataAccess": "1.0.0"
         },
@@ -859,6 +870,11 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "CurrencyExchangeService/1.0.0": {
+      "type": "project",
+      "path": "../CurrencyExchangeService/CurrencyExchangeService.csproj",
+      "msbuildProject": "../CurrencyExchangeService/CurrencyExchangeService.csproj"
     },
     "WalletAPI.BusinessLogic/1.0.0": {
       "type": "project",

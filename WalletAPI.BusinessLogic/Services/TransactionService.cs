@@ -30,6 +30,7 @@ public class TransactionService : ITransactionService
     public async Task<Transaction> Get(string id)
     {
         var transaction = await _transactionRepository.Get(id);
+
         if (transaction == null)
             return Transaction.Default;
 

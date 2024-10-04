@@ -172,6 +172,16 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "CurrencyExchangeService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CurrencyExchangeService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CurrencyExchangeService.dll": {}
+        }
+      },
       "WalletAPI.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -649,6 +659,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "CurrencyExchangeService/1.0.0": {
+      "type": "project",
+      "path": "../CurrencyExchangeService/CurrencyExchangeService.csproj",
+      "msbuildProject": "../CurrencyExchangeService/CurrencyExchangeService.csproj"
+    },
     "WalletAPI.DataAccess/1.0.0": {
       "type": "project",
       "path": "../WalletAPI.DataAccess/WalletAPI.DataAccess.csproj",
@@ -663,6 +678,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper >= 13.0.1",
+      "CurrencyExchangeService >= 1.0.0",
       "Microsoft.Extensions.Logging >= 9.0.0-rc.1.24431.7",
       "WalletAPI.DataAccess >= 1.0.0"
     ]
@@ -692,6 +708,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/CurrencyExchangeService.csproj": {
+              "projectPath": "/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/CurrencyExchangeService.csproj"
+            },
             "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/WalletAPI.DataAccess.csproj": {
               "projectPath": "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/WalletAPI.DataAccess.csproj"
             }

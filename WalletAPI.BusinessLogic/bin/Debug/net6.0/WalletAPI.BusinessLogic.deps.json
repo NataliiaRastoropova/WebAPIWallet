@@ -9,6 +9,7 @@
       "WalletAPI.BusinessLogic/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
+          "CurrencyExchangeService": "1.0.0",
           "Microsoft.Extensions.Logging": "9.0.0-rc.1.24431.7",
           "WalletAPI.DataAccess": "1.0.0"
         },
@@ -115,6 +116,11 @@
       },
       "System.Memory/4.5.5": {},
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "CurrencyExchangeService/1.0.0": {
+        "runtime": {
+          "CurrencyExchangeService.dll": {}
+        }
+      },
       "WalletAPI.DataAccess/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "9.0.0-rc.1.24431.7",
@@ -220,6 +226,11 @@
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "CurrencyExchangeService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "WalletAPI.DataAccess/1.0.0": {
       "type": "project",
