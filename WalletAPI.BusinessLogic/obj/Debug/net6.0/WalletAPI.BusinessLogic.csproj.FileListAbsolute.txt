@@ -15,3 +15,5 @@
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/refint/WalletAPI.BusinessLogic.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/WalletAPI.BusinessLogic.pdb
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/obj/Debug/net6.0/ref/WalletAPI.BusinessLogic.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/bin/Debug/net6.0/CurrencyExchangeService.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/bin/Debug/net6.0/CurrencyExchangeService.pdb

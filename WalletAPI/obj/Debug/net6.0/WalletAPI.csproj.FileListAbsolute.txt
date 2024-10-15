@@ -39,3 +39,5 @@
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.Extensions.Options.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/CurrencyExchangeService.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/CurrencyExchangeService.pdb
