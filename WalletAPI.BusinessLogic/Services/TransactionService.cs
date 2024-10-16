@@ -1,3 +1,4 @@
+using WalletAPI.BusinessLogic.Command.TransactionCommands;
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Dtos;
 using WalletAPI.DataAccess.Entities;
@@ -19,7 +20,11 @@ public class TransactionService : ITransactionService
 
     public async Task<IReadOnlyList<Transaction>> Get()
     {
-        var transactions = await _transactionRepository.Get();
+        var command = new GetTransactionsCommand(_transactionRepository);
+        var transactions = await command.Execute();
+
+        
+      //  var transactions = await _transactionRepository.Get();
         if (transactions == null)
             return new List<Transaction>();
         
