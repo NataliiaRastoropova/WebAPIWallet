@@ -1,5 +1,6 @@
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Dtos;
+using WalletAPI.BusinessLogic.Strategy;
 using WalletAPI.DataAccess;
 using WalletAPI.DataAccess.Entities;
 using WalletAPI.DataAccess.Repositories.Account;
@@ -11,6 +12,7 @@ namespace WalletAPI.BusinessLogic.Services;
 public class AccountService : IAccountService
 {
     private readonly IAccountRepository _accountRepository;
+    private IDepositStrategy _depositStrategy;
 
     // public AccountService(IAccountRepository accountRepository)
     public AccountService(WalletContext context)
@@ -87,5 +89,19 @@ public class AccountService : IAccountService
             throw new ArgumentNullException();
         
         await _accountRepository.Delete(id);
+    }
+
+    public void SetDepositStrategy(IDepositStrategy depositStrategy)
+    {
+        _depositStrategy = depositStrategy;
+    }
+
+    public void Deposit(Account account, decimal amount)
+    {
+        if (_depositStrategy == null)
+        {
+            throw new InvalidOperationException("Deposit strategy not set.");
+        }
+        _depositStrategy.Deposit(account, amount);
     }
 }
