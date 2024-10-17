@@ -1,6 +1,7 @@
 using WalletAPI.BusinessLogic.Command.TransactionCommands;
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Dtos;
+using WalletAPI.BusinessLogic.Enumerator;
 using WalletAPI.DataAccess.Entities;
 using WalletAPI.DataAccess.Repositories.Account;
 using WalletAPI.Infrastructure.Enums;
@@ -92,5 +93,16 @@ public class TransactionService : ITransactionService
             throw new ArgumentNullException();
         
         await _transactionRepository.Delete(id);
+    }
+
+    public async Task Iterator()
+    {
+        TransactionCollection transactions = new TransactionCollection();
+        
+        // Ітеруємо через колекцію транзакцій за допомогою foreach
+        foreach (var transaction in transactions)
+        {
+            Console.WriteLine($"{transaction.Id}: {transaction.Amount}");
+        }
     }
 }
