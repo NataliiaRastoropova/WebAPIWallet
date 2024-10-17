@@ -11,7 +11,7 @@ public sealed class Account : IEquatable<Account>
             CurrencyType.USD, DateTime.MinValue, Infrastructure.Enums.BankType.None);
 
     public string Id { get; }
-    public decimal Amount { get; }
+    public decimal Amount { get; private set; }
     public AccountType Type { get; }
     public CurrencyType Currency { get; }
     public DateTime LastModified { get; }
@@ -28,6 +28,9 @@ public sealed class Account : IEquatable<Account>
         LastModified = lastModified;
         BankType = bankType;
     }
+    
+    public void UpdateBalance(decimal amount) =>
+        Amount += amount;
 
     public bool Equals(Account? other)
     {
