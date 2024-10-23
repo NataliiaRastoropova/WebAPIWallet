@@ -1,5 +1,6 @@
 using WalletAPI.BusinessLogic.Installers;
 using WalletAPI.DataAccess.Installers;
+using WalletAPI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,5 +30,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseMiddleware<WebRequestsLoggerMiddleware>();
 
 app.Run();

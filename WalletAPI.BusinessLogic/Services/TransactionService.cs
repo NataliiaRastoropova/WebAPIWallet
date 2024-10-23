@@ -1,5 +1,8 @@
+using Microsoft.Extensions.Logging;
+using WalletAPI.BusinessLogic.ChainOfResponsibility.TransactionHandling;
 using WalletAPI.BusinessLogic.Command.TransactionCommands;
 using WalletAPI.BusinessLogic.Contracts;
+using WalletAPI.BusinessLogic.DomainModel;
 using WalletAPI.BusinessLogic.Dtos;
 using WalletAPI.BusinessLogic.Enumerator;
 using WalletAPI.DataAccess.Entities;
@@ -12,11 +15,15 @@ public class TransactionService : ITransactionService
 {
     private readonly ITransactionRepository _transactionRepository;
     private readonly IAccountRepository _accountRepository;
+    private ILoggerFactory _loggerFactory;
 
-    public TransactionService(ITransactionRepository transactionRepository, IAccountRepository accountRepository)
+    public TransactionService(ITransactionRepository transactionRepository, 
+        IAccountRepository accountRepository,
+        ILoggerFactory loggerFactory)
     {
         _transactionRepository = transactionRepository;
         _accountRepository = accountRepository;
+        _loggerFactory = loggerFactory;
     }
 
     public async Task<IReadOnlyList<Transaction>> Get()
@@ -59,6 +66,8 @@ public class TransactionService : ITransactionService
     {
         if (transaction != Transaction.Default)
         {
+            ValidateTransaction(transaction);
+            
             var account = await _accountRepository.Get(transaction.AccountId);
 
             if (account == null)
@@ -85,6 +94,31 @@ public class TransactionService : ITransactionService
 
             await _accountRepository.Update(account);
         }
+    }
+
+    private void ValidateTransactionWithBuilder(Transaction transaction)
+    {
+        TransactionHandlerBuilder builder = new TransactionHandlerBuilder(_loggerFactory);
+
+        IHandler<Transaction> transactionHandler = builder.Create().SetLimit(200).SetBalance(500).Build();
+
+        transactionHandler.Handle(transaction);
+    }
+
+    private void ValidateTransaction(Transaction transaction)
+    {
+        TransactionHandlerBuilder builder = new TransactionHandlerBuilder(_loggerFactory);
+        
+        // Створюємо ланцюжок обробників
+        IHandler<Transaction> balanceHandler = new BalanceHandler(500 , _loggerFactory);
+        IHandler<Transaction> limitHandler = new LimitHandler(200, _loggerFactory);
+        IHandler<Transaction> transactionHandler = new TransactionHandler(_loggerFactory);
+
+        // Зв'язуємо обробники
+        balanceHandler.SetNext(limitHandler).SetNext(transactionHandler);
+
+        // Запускаємо обробку запиту
+        balanceHandler.Handle(transaction);
     }
 
     public async Task Remove(string id)

@@ -1,4 +1,5 @@
 using System.Collections;
+using WalletAPI.BusinessLogic.DomainModel;
 using WalletAPI.BusinessLogic.Dtos;
 
 namespace WalletAPI.BusinessLogic.Enumerator;
