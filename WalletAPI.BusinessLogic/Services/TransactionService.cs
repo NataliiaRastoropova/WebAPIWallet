@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Logging;
 using WalletAPI.BusinessLogic.ChainOfResponsibility.TransactionHandling;
+using WalletAPI.BusinessLogic.ChainOfResponsibility.ValidationHandling;
 using WalletAPI.BusinessLogic.Command.TransactionCommands;
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.DomainModel;
