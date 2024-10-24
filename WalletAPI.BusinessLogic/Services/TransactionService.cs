@@ -6,6 +6,7 @@ using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.DomainModel;
 using WalletAPI.BusinessLogic.Dtos;
 using WalletAPI.BusinessLogic.Enumerator;
+using WalletAPI.BusinessLogic.TemplateMethod;
 using WalletAPI.DataAccess.Entities;
 using WalletAPI.DataAccess.Repositories.Account;
 using WalletAPI.Infrastructure.Enums;
@@ -139,5 +140,17 @@ public class TransactionService : ITransactionService
         {
             Console.WriteLine($"{transaction.Id}: {transaction.Amount}");
         }
+    }
+
+    public void TransactionManager()
+    {
+        WalletTransaction standardTransaction = new StandardTransaction(_loggerFactory);
+        WalletTransaction feeTransaction = new FeeTransaction(_loggerFactory);
+
+        Console.WriteLine("Standard transaction:");
+        standardTransaction.ProcessTransaction(100);
+
+        Console.WriteLine("\nFee transaction:");
+        feeTransaction.ProcessTransaction(100);
     }
 }

@@ -680,6 +680,7 @@
       "AutoMapper >= 13.0.1",
       "CurrencyExchangeService >= 1.0.0",
       "Microsoft.Extensions.Logging >= 9.0.0-rc.1.24431.7",
+      "Microsoft.Extensions.Logging.Abstractions >= 9.0.0-rc.1.24431.7",
       "WalletAPI.DataAccess >= 1.0.0"
     ]
   },
@@ -732,6 +733,10 @@
             "version": "[13.0.1, )"
           },
           "Microsoft.Extensions.Logging": {
+            "target": "Package",
+            "version": "[9.0.0-rc.1.24431.7, )"
+          },
+          "Microsoft.Extensions.Logging.Abstractions": {
             "target": "Package",
             "version": "[9.0.0-rc.1.24431.7, )"
           }
