@@ -1,8 +1,7 @@
 using Microsoft.Extensions.Logging;
-using WalletAPI.BusinessLogic.ChainOfResponsibility.TransactionHandling;
 using WalletAPI.BusinessLogic.DomainModel;
 
-namespace WalletAPI.BusinessLogic.ChainOfResponsibility.ValidationHandling;
+namespace WalletAPI.BusinessLogic.ChainOfResponsibility.TransactionHandling;
 
 public class TransactionHandlerBuilder
 {

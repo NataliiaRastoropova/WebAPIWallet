@@ -12,7 +12,7 @@ public class WarningHandler : LogHandler
     {
         if (level == LogLevel.Warning)
         {
-            Logger.LogCritical($"{message}");
+            Logger.LogWarning($"{message}");
         }
         else if (NextHandler != null)
         {

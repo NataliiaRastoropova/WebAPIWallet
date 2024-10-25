@@ -109,8 +109,6 @@ public class TransactionService : ITransactionService
 
     private void ValidateTransaction(Transaction transaction)
     {
-        TransactionHandlerBuilder builder = new TransactionHandlerBuilder(_loggerFactory);
-        
         // Створюємо ланцюжок обробників
         IHandler<Transaction> balanceHandler = new BalanceHandler(500 , _loggerFactory);
         IHandler<Transaction> limitHandler = new LimitHandler(200, _loggerFactory);
