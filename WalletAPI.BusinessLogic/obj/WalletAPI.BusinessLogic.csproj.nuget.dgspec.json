@@ -105,6 +105,10 @@
             "Microsoft.Extensions.Logging": {
               "target": "Package",
               "version": "[9.0.0-rc.1.24431.7, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.0-rc.1.24431.7, )"
             }
           },
           "imports": [

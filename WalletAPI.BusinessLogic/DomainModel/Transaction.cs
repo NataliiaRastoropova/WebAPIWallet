@@ -1,8 +1,6 @@
-using WalletAPI.BusinessLogic.DomainModel;
-using WalletAPI.DataAccess.Entities;
 using WalletAPI.Infrastructure.Enums;
 
-namespace WalletAPI.BusinessLogic.Dtos;
+namespace WalletAPI.BusinessLogic.DomainModel;
 
 public sealed class Transaction: IEquatable<Transaction>, ICloneable
 {

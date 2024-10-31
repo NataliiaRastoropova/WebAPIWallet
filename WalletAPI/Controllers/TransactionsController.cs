@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.Decorator;
+using WalletAPI.BusinessLogic.DomainModel;
 using WalletAPI.BusinessLogic.Dtos;
 using WalletAPI.Infrastructure.Enums;
 using WalletAPI.Models.Transactions;

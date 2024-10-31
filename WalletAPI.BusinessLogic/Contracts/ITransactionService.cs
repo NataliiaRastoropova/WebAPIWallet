@@ -1,3 +1,4 @@
+using WalletAPI.BusinessLogic.DomainModel;
 using WalletAPI.BusinessLogic.Dtos;
 
 namespace WalletAPI.BusinessLogic.Contracts;

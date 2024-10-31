@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WalletAPI.BusinessLogic.Builder;
 using WalletAPI.BusinessLogic.Contracts;
+using WalletAPI.BusinessLogic.DomainModel;
 using WalletAPI.BusinessLogic.Dtos;
 using WalletAPI.DataAccess.Entities;
 using WalletAPI.DataAccess.Repositories.Account;
