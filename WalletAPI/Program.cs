@@ -1,13 +1,10 @@
-using WalletAPI.BusinessLogic.Installers;
 using WalletAPI.DataAccess.Installers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services
-    .AddDataContext()
-    .AddTransactions()
-    .AddAccounts();
+    .AddDataContext();
     
 
 builder.Services.AddControllers();

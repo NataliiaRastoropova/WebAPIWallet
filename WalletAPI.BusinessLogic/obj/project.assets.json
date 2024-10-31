@@ -14,22 +14,6 @@
           "lib/net6.0/AutoMapper.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/6.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {}
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
-        }
-      },
       "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
         "type": "package",
         "compile": {
@@ -81,30 +65,6 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
-      },
-      "WalletAPI.DataAccess/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "6.0.1",
-          "WalletAPI.Infrastructure": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/WalletAPI.DataAccess.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WalletAPI.DataAccess.dll": {}
-        }
-      },
-      "WalletAPI.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/WalletAPI.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WalletAPI.Infrastructure.dll": {}
-        }
       }
     }
   },
@@ -122,31 +82,6 @@
         "icon.png",
         "lib/net6.0/AutoMapper.dll",
         "lib/net6.0/AutoMapper.xml"
-      ]
-    },
-    "Microsoft.Extensions.DependencyInjection/6.0.1": {
-      "sha512": "vWXPg3HJQIpZkENn1KWq8SfbqVujVD7S7vIAyFXXqK5xkf1Vho+vG0bLBCHxU36lD1cLLtmGpfYf0B3MYFi9tQ==",
-      "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/6.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
-        "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/net6.0/Microsoft.Extensions.DependencyInjection.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.nuspec",
-        "useSharedDesignerContext.txt"
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
@@ -244,22 +179,11 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "WalletAPI.DataAccess/1.0.0": {
-      "type": "project",
-      "path": "../WalletAPI.DataAccess/WalletAPI.DataAccess.csproj",
-      "msbuildProject": "../WalletAPI.DataAccess/WalletAPI.DataAccess.csproj"
-    },
-    "WalletAPI.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../WalletAPI.Infrastructure/WalletAPI.Infrastructure.csproj",
-      "msbuildProject": "../WalletAPI.Infrastructure/WalletAPI.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "AutoMapper >= 13.0.1",
-      "WalletAPI.DataAccess >= 1.0.0"
+      "AutoMapper >= 13.0.1"
     ]
   },
   "packageFolders": {
@@ -286,11 +210,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/WalletAPI.DataAccess.csproj": {
-              "projectPath": "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.DataAccess/WalletAPI.DataAccess.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

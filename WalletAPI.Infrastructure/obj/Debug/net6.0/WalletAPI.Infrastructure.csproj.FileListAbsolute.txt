@@ -10,3 +10,8 @@
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/refint/WalletAPI.Infrastructure.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/WalletAPI.Infrastructure.pdb
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/ref/WalletAPI.Infrastructure.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/bin/Debug/net6.0/WalletAPI.Application.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/bin/Debug/net6.0/WalletAPI.Domain.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/bin/Debug/net6.0/WalletAPI.Application.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/bin/Debug/net6.0/WalletAPI.Domain.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/obj/Debug/net6.0/WalletAPI.Infrastructure.csproj.CopyComplete

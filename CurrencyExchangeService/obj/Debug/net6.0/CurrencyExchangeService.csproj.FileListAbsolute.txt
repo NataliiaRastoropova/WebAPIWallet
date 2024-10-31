@@ -1,0 +1,12 @@
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/bin/Debug/net6.0/CurrencyExchangeService.deps.json
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/bin/Debug/net6.0/CurrencyExchangeService.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/bin/Debug/net6.0/CurrencyExchangeService.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/obj/Debug/net6.0/CurrencyExchangeService.csproj.AssemblyReference.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/obj/Debug/net6.0/CurrencyExchangeService.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/obj/Debug/net6.0/CurrencyExchangeService.AssemblyInfoInputs.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/obj/Debug/net6.0/CurrencyExchangeService.AssemblyInfo.cs
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/obj/Debug/net6.0/CurrencyExchangeService.csproj.CoreCompileInputs.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/obj/Debug/net6.0/CurrencyExchangeService.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/obj/Debug/net6.0/refint/CurrencyExchangeService.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/obj/Debug/net6.0/CurrencyExchangeService.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/CurrencyExchangeService/obj/Debug/net6.0/ref/CurrencyExchangeService.dll

@@ -11,7 +11,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\WalletAPI.BusinessLogic\WalletAPI.BusinessLogic.csproj" />
+      <ProjectReference Include="..\WalletAPI.Application\WalletAPI.Application.csproj" />
+      <ProjectReference Include="..\WalletAPI.Infrastructure\WalletAPI.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

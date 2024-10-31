@@ -1,0 +1,15 @@
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/obj/Debug/net6.0/WalletAPI.Application.csproj.AssemblyReference.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/obj/Debug/net6.0/WalletAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/obj/Debug/net6.0/WalletAPI.Application.AssemblyInfoInputs.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/obj/Debug/net6.0/WalletAPI.Application.AssemblyInfo.cs
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/obj/Debug/net6.0/WalletAPI.Application.csproj.CoreCompileInputs.cache
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/bin/Debug/net6.0/WalletAPI.Application.deps.json
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/bin/Debug/net6.0/WalletAPI.Application.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/bin/Debug/net6.0/WalletAPI.Application.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/bin/Debug/net6.0/WalletAPI.Domain.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/bin/Debug/net6.0/WalletAPI.Domain.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/obj/Debug/net6.0/WalletAPI.Application.csproj.CopyComplete
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/obj/Debug/net6.0/WalletAPI.Application.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/obj/Debug/net6.0/refint/WalletAPI.Application.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/obj/Debug/net6.0/WalletAPI.Application.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Application/obj/Debug/net6.0/ref/WalletAPI.Application.dll

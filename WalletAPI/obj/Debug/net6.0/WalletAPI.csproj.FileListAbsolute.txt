@@ -5,16 +5,11 @@
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.runtimeconfig.json
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.pdb
-/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/AutoMapper.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.OpenApi.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.BusinessLogic.dll
-/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.DataAccess.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.Infrastructure.dll
-/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.BusinessLogic.pdb
-/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.DataAccess.pdb
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.Infrastructure.pdb
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/obj/Debug/net6.0/WalletAPI.csproj.AssemblyReference.cache
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/obj/Debug/net6.0/WalletAPI.GeneratedMSBuildEditorConfig.editorconfig
@@ -33,3 +28,8 @@
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/obj/Debug/net6.0/WalletAPI.genruntimeconfig.cache
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/obj/Debug/net6.0/ref/WalletAPI.dll
 /Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.Application.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.Domain.dll
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.Application.pdb
+/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/bin/Debug/net6.0/WalletAPI.Domain.pdb

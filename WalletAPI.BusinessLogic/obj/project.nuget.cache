@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "H1iiuO4GTcwMDbDLF2Bt/cGrOAlfpC7PXjHUoXrGT3/fm0YV/oVlhhwLo7hcbfRKBbD3nO2yy7RNVxi4tAxUBw==",
+  "dgSpecHash": "9MRWlzNGULuvheCBXr15UTlMPH/i+wjrmIN6JHaCglBNdOj4i6zsXnz6M1dqBIdMojGb0V9qEhUlDfxNMAOtAA==",
   "success": true,
   "projectFilePath": "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/WalletAPI.BusinessLogic.csproj",
   "expectedPackageFiles": [
     "/Users/nataliiarastoropova/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.1/microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
