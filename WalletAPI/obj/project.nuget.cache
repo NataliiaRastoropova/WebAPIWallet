@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HJA8MZ93W5W0bFE9Rrq+NmSYxxBmgwa0riMPjNDs3DTEHqF3wsenEgbi4b4OdpiXVcGwmfgoTeAsGbC6ZQ6ixQ==",
+  "dgSpecHash": "xy34/o2k7L4=",
   "success": true,
   "projectFilePath": "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/WalletAPI.csproj",
   "expectedPackageFiles": [
@@ -21,7 +21,10 @@
     "/Users/nataliiarastoropova/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/system.diagnostics.diagnosticsource/9.0.0-rc.1.24431.7/system.diagnostics.diagnosticsource.9.0.0-rc.1.24431.7.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "/Users/nataliiarastoropova/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.36/microsoft.netcore.app.host.osx-x64.6.0.36.nupkg.sha512"
   ],
   "logs": []
 }

@@ -11,6 +11,7 @@
           "AutoMapper": "13.0.1",
           "CurrencyExchangeService": "1.0.0",
           "Microsoft.Extensions.Logging": "9.0.0-rc.1.24431.7",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0-rc.1.24431.7",
           "WalletAPI.DataAccess": "1.0.0"
         },
         "runtime": {
@@ -118,7 +119,10 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "CurrencyExchangeService/1.0.0": {
         "runtime": {
-          "CurrencyExchangeService.dll": {}
+          "CurrencyExchangeService.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WalletAPI.DataAccess/1.0.0": {
@@ -127,12 +131,18 @@
           "WalletAPI.Infrastructure": "1.0.0"
         },
         "runtime": {
-          "WalletAPI.DataAccess.dll": {}
+          "WalletAPI.DataAccess.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "WalletAPI.Infrastructure/1.0.0": {
         "runtime": {
-          "WalletAPI.Infrastructure.dll": {}
+          "WalletAPI.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mwdsbBrcutOnwvRu3wuKtj0WzG+FUBW7y4SrvjJrI4ZIbsDfwIeh4b7cYcAefiSkw4R/hZVAxP9D3+3Bf13a2A==",
+  "dgSpecHash": "MyYU1nXqa0k=",
   "success": true,
   "projectFilePath": "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.Infrastructure/WalletAPI.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
   "logs": []
 }

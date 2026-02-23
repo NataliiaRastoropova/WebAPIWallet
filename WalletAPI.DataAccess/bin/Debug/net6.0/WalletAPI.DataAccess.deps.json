@@ -38,7 +38,10 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "WalletAPI.Infrastructure/1.0.0": {
         "runtime": {
-          "WalletAPI.Infrastructure.dll": {}
+          "WalletAPI.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
