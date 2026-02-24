@@ -9,4 +9,7 @@ public class AccountEntity : BaseEntity
     public CurrencyType Currency { get; set; }
     public DateTime LastModified { get; set; }
     public BankType BankType { get; set; }
+    
+    // Navigation
+    public ICollection<TransactionEntity> Transactions { get; set; }
 }

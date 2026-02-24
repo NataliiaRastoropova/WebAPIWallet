@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services
-    .AddDataContext()
+    .AddDataContext(builder.Configuration.GetConnectionString("WalletDB"))
     .AddTransactions()
     .AddAccounts();
     

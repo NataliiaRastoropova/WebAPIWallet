@@ -1,16 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "TKp6R2gYG8s=",
+  "dgSpecHash": "KIlHpb9Eycg=",
   "success": true,
   "projectFilePath": "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI.BusinessLogic/WalletAPI.BusinessLogic.csproj",
   "expectedPackageFiles": [
     "/Users/nataliiarastoropova/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0-rc.1.24431.7/microsoft.extensions.dependencyinjection.9.0.0-rc.1.24431.7.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0-rc.1.24431.7/microsoft.extensions.dependencyinjection.abstractions.9.0.0-rc.1.24431.7.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.logging/9.0.0-rc.1.24431.7/microsoft.extensions.logging.9.0.0-rc.1.24431.7.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0-rc.1.24431.7/microsoft.extensions.logging.abstractions.9.0.0-rc.1.24431.7.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.options/9.0.0-rc.1.24431.7/microsoft.extensions.options.9.0.0-rc.1.24431.7.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.primitives/9.0.0-rc.1.24431.7/microsoft.extensions.primitives.9.0.0-rc.1.24431.7.nupkg.sha512"
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.entityframeworkcore/9.0.3/microsoft.entityframeworkcore.9.0.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.3/microsoft.entityframeworkcore.abstractions.9.0.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.3/microsoft.entityframeworkcore.analyzers.9.0.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.entityframeworkcore.relational/9.0.3/microsoft.entityframeworkcore.relational.9.0.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.3/microsoft.extensions.caching.abstractions.9.0.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.caching.memory/9.0.3/microsoft.extensions.caching.memory.9.0.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.3/microsoft.extensions.configuration.abstractions.9.0.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.dependencyinjection/10.0.3/microsoft.extensions.dependencyinjection.10.0.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.3/microsoft.extensions.dependencyinjection.abstractions.10.0.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.logging/9.0.13/microsoft.extensions.logging.9.0.13.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.13/microsoft.extensions.logging.abstractions.9.0.13.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.options/9.0.13/microsoft.extensions.options.9.0.13.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.primitives/9.0.13/microsoft.extensions.primitives.9.0.13.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/npgsql/9.0.2/npgsql.9.0.2.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/npgsql.entityframeworkcore.postgresql/9.0.3/npgsql.entityframeworkcore.postgresql.9.0.3.nupkg.sha512"
   ],
   "logs": []
 }
