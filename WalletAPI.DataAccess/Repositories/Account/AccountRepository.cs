@@ -26,7 +26,7 @@ public sealed class AccountRepository : IAccountRepository
     public Task Create(AccountEntity entity)
     {
         _context.Accounts.Add(entity);
-        return Task.CompletedTask;
+        return _context.SaveChangesAsync();
     }
 
     public Task Update(AccountEntity entity)
@@ -41,7 +41,8 @@ public sealed class AccountRepository : IAccountRepository
                 e.LastModified = DateTime.UtcNow;
             }
         }
-        return Task.CompletedTask;
+
+        return _context.SaveChangesAsync();
     }
 
     public Task Delete(string id)
@@ -51,7 +52,7 @@ public sealed class AccountRepository : IAccountRepository
         {
             _context.Accounts.Remove(entity);
         }
-        return Task.CompletedTask;
+        return _context.SaveChangesAsync();
     }
     
 }

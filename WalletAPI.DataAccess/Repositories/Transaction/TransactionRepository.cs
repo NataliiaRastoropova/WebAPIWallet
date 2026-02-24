@@ -41,7 +41,7 @@ public sealed class TransactionRepository : ITransactionRepository
                 e.LastModified = DateTime.UtcNow;
             }
         }
-        return Task.CompletedTask;
+        return _context.SaveChangesAsync();
     }
 
     public Task Delete(string id)
@@ -51,6 +51,6 @@ public sealed class TransactionRepository : ITransactionRepository
         {
             _context.Transactions.Remove(entity);
         }
-        return Task.CompletedTask;
+        return _context.SaveChangesAsync();
     }
 }

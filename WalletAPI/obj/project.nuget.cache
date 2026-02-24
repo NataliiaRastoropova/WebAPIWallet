@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TBqRMigXJhw=",
+  "dgSpecHash": "s1ypFiJO/BI=",
   "success": true,
   "projectFilePath": "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/WalletAPI.csproj",
   "expectedPackageFiles": [
@@ -20,7 +20,7 @@
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.3/microsoft.entityframeworkcore.analyzers.9.0.3.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.entityframeworkcore.design/9.0.3/microsoft.entityframeworkcore.design.9.0.3.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.entityframeworkcore.relational/9.0.3/microsoft.entityframeworkcore.relational.9.0.3.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.apidescription.server/9.0.0/microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.3/microsoft.extensions.caching.abstractions.9.0.3.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.caching.memory/9.0.3/microsoft.extensions.caching.memory.9.0.3.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.3/microsoft.extensions.configuration.abstractions.9.0.3.nupkg.sha512",
@@ -31,14 +31,14 @@
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.13/microsoft.extensions.logging.abstractions.9.0.13.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.options/9.0.13/microsoft.extensions.options.9.0.13.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/microsoft.extensions.primitives/9.0.13/microsoft.extensions.primitives.9.0.13.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/microsoft.openapi/2.4.1/microsoft.openapi.2.4.1.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/mono.texttemplating/3.0.0/mono.texttemplating.3.0.0.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/npgsql/9.0.2/npgsql.9.0.2.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/npgsql.entityframeworkcore.postgresql/9.0.3/npgsql.entityframeworkcore.postgresql.9.0.3.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/nataliiarastoropova/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/swashbuckle.aspnetcore/10.1.4/swashbuckle.aspnetcore.10.1.4.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/swashbuckle.aspnetcore.swagger/10.1.4/swashbuckle.aspnetcore.swagger.10.1.4.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/swashbuckle.aspnetcore.swaggergen/10.1.4/swashbuckle.aspnetcore.swaggergen.10.1.4.nupkg.sha512",
+    "/Users/nataliiarastoropova/.nuget/packages/swashbuckle.aspnetcore.swaggerui/10.1.4/swashbuckle.aspnetcore.swaggerui.10.1.4.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/system.codedom/6.0.0/system.codedom.6.0.0.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/system.collections.immutable/7.0.0/system.collections.immutable.7.0.0.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/system.composition/7.0.0/system.composition.7.0.0.nupkg.sha512",
@@ -53,16 +53,5 @@
     "/Users/nataliiarastoropova/.nuget/packages/system.text.json/9.0.3/system.text.json.9.0.3.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Swashbuckle.AspNetCore.SwaggerUI' 6.2.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-qrmm-w75w-3wpx",
-      "libraryId": "Swashbuckle.AspNetCore.SwaggerUI",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

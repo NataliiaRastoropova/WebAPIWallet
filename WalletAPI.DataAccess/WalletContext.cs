@@ -22,6 +22,7 @@ public class WalletContext : DbContext
                     Amount = 10,
                     Type = AccountType.Cash,
                     Currency = CurrencyType.USD,
+                    BankType = BankType.PrivateBank,
                     LastModified = new DateTime(2025, 01, 02, 0, 0, 0, DateTimeKind.Utc)
                 },
                 new AccountEntity
@@ -30,6 +31,7 @@ public class WalletContext : DbContext
                     Amount = 20,
                     Type = AccountType.Debit,
                     Currency = CurrencyType.JPY,
+                    BankType = BankType.Mono,
                     LastModified = new DateTime(2024, 01, 02, 0, 0, 0, DateTimeKind.Utc)
                 },
                 new AccountEntity
@@ -38,6 +40,7 @@ public class WalletContext : DbContext
                     Amount = 30,
                     Type = AccountType.Credit,
                     Currency = CurrencyType.CAD,
+                    BankType = BankType.PrivateBank,
                     LastModified = new DateTime(2024, 06, 02, 0, 0, 0, DateTimeKind.Utc)
                 });
 

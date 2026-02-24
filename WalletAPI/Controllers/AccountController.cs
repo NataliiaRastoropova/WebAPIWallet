@@ -3,9 +3,6 @@ using WalletAPI.BusinessLogic.Builder;
 using WalletAPI.BusinessLogic.Contracts;
 using WalletAPI.BusinessLogic.DomainModel;
 using WalletAPI.BusinessLogic.Dtos;
-using WalletAPI.DataAccess.Entities;
-using WalletAPI.DataAccess.Repositories.Account;
-using WalletAPI.DataAccess.Repositories.Factory;
 using WalletAPI.Infrastructure.Enums;
 using WalletAPI.Models.Accounts;
 
@@ -85,6 +82,7 @@ public class AccountController : ControllerBase
     public async Task<ActionResult> Update([FromBody] UpdateAccountRequest request)
     {
         var entity = _builder
+            .SetId(request.Id)
             .SetBalance(request.Amount)
             .SetCurrency(request.Currency)
             .SetType(request.Type)

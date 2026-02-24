@@ -1,0 +1,40 @@
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using WalletAPI.Infrastructure.Enums
+@model WalletAPI.MVC.Models.AccountModels.EditAccountViewModel
+
+@{
+    ViewData["Title"] = "Edit Account";
+}
+
+<h2>Edit Account</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Amount" class="form-label"></label>
+        <input asp-for="Amount" class="form-control" />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Type" class="form-label"></label>
+        <select asp-for="Type" class="form-select"
+                asp-items="Html.GetEnumSelectList<AccountType>()"></select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Currency" class="form-label"></label>
+        <select asp-for="Currency" class="form-select"
+                asp-items="Html.GetEnumSelectList<CurrencyType>()"></select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="BankType" class="form-label"></label>
+        <select asp-for="BankType" class="form-select"
+                asp-items="Html.GetEnumSelectList<BankType>()"></select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
