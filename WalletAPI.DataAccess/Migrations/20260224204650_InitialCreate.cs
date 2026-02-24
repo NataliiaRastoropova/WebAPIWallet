@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace WalletAPI.DataAccess.Migrations
 {
     /// <inheritdoc />
@@ -45,6 +47,26 @@ namespace WalletAPI.DataAccess.Migrations
                         column: x => x.AccountId,
                         principalTable: "Account",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.InsertData(
+                table: "Account",
+                columns: new[] { "Id", "Amount", "BankType", "Currency", "LastModified", "Type" },
+                values: new object[,]
+                {
+                    { "1", 10m, 0, 0, new DateTime(2026, 2, 24, 20, 46, 50, 377, DateTimeKind.Utc).AddTicks(3770), 1 },
+                    { "2", 20m, 0, 2, new DateTime(2026, 2, 24, 20, 46, 50, 377, DateTimeKind.Utc).AddTicks(3910), 2 },
+                    { "3", 30m, 0, 1, new DateTime(2026, 2, 24, 20, 46, 50, 377, DateTimeKind.Utc).AddTicks(3910), 3 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Transaction",
+                columns: new[] { "Id", "AccountId", "Amount", "LastModified", "TransactionType" },
+                values: new object[,]
+                {
+                    { "0977f770-8c4f-4879-8415-45df8fc1e59e", "1", 1000m, new DateTime(2026, 2, 24, 20, 46, 50, 378, DateTimeKind.Utc).AddTicks(3080), 0 },
+                    { "81cdd47d-cc12-470c-8cd2-b52610d6ca4c", "2", 100m, new DateTime(2026, 2, 24, 20, 46, 50, 378, DateTimeKind.Utc).AddTicks(3370), 1 },
+                    { "de8282f3-a93b-4b80-85e1-b119d84291c3", "3", 500m, new DateTime(2026, 2, 24, 20, 46, 50, 378, DateTimeKind.Utc).AddTicks(3370), 0 }
                 });
 
             migrationBuilder.CreateIndex(

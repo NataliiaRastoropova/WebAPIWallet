@@ -15,64 +15,56 @@ public class WalletContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(WalletContext).Assembly);
+        modelBuilder.Entity<AccountEntity>().HasData(
+            new AccountEntity
+                {
+                    Id = "1",
+                    Amount = 10,
+                    Type = AccountType.Cash,
+                    Currency = CurrencyType.USD,
+                    LastModified = new DateTime(2025, 01, 02, 0, 0, 0, DateTimeKind.Utc)
+                },
+                new AccountEntity
+                {
+                    Id = "2",
+                    Amount = 20,
+                    Type = AccountType.Debit,
+                    Currency = CurrencyType.JPY,
+                    LastModified = new DateTime(2024, 01, 02, 0, 0, 0, DateTimeKind.Utc)
+                },
+                new AccountEntity
+                {
+                    Id = "3",
+                    Amount = 30,
+                    Type = AccountType.Credit,
+                    Currency = CurrencyType.CAD,
+                    LastModified = new DateTime(2024, 06, 02, 0, 0, 0, DateTimeKind.Utc)
+                });
+
+        modelBuilder.Entity<TransactionEntity>().HasData(
+            new TransactionEntity
+            {
+                Id = "aaaaaaa1-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                Amount = 1000,
+                TransactionType = TransactionType.Income,
+                LastModified = new DateTime(2024, 01, 02, 0, 0, 0, DateTimeKind.Utc),
+                AccountId = "1"
+            },
+            new TransactionEntity
+            {
+                Id = "bbbbbbb2-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+                Amount = 100,
+                TransactionType = TransactionType.Outcome,
+                LastModified = new DateTime(2024, 01, 03, 0, 0, 0, DateTimeKind.Utc),
+                AccountId = "2"
+            },
+            new TransactionEntity
+            {
+                Id = "ccccccc3-cccc-cccc-cccc-cccccccccccc",
+                Amount = 500,
+                TransactionType = TransactionType.Income,
+                LastModified = new DateTime(2024, 01, 05, 0, 0, 0, DateTimeKind.Utc),
+                AccountId = "3"
+            });
     }
-    
-    // public WalletContext()
-    // {
-    //     Accounts = new List<AccountEntity>()
-    //     {
-    //         new AccountEntity
-    //         {
-    //             Id = "1",
-    //             Amount = 10,
-    //             Type = AccountType.Cash,
-    //             Currency = CurrencyType.USD,
-    //             LastModified = DateTime.UtcNow
-    //         },
-    //         new AccountEntity
-    //         {
-    //             Id = "2",
-    //             Amount = 20,
-    //             Type = AccountType.Debit,
-    //             Currency = CurrencyType.JPY,
-    //             LastModified = DateTime.UtcNow
-    //         },
-    //         new AccountEntity
-    //         {
-    //             Id = "3",
-    //             Amount = 30,
-    //             Type = AccountType.Credit,
-    //             Currency = CurrencyType.CAD,
-    //             LastModified = DateTime.UtcNow
-    //         }
-    //     };
-    //
-    //     Transactions = new List<TransactionEntity>
-    //     {
-    //         new TransactionEntity
-    //         {
-    //             Id = Guid.NewGuid().ToString(),
-    //             Amount = 1000,
-    //             TransactionType = TransactionType.Income,
-    //             LastModified = DateTime.UtcNow,
-    //             AccountId = "1"
-    //         },
-    //         new TransactionEntity
-    //         {
-    //             Id = Guid.NewGuid().ToString(),
-    //             Amount = 100,
-    //             TransactionType = TransactionType.Outcome,
-    //             LastModified = DateTime.UtcNow,
-    //             AccountId = "2"
-    //         },
-    //         new TransactionEntity
-    //         {
-    //             Id = Guid.NewGuid().ToString(),
-    //             Amount = 500,
-    //             TransactionType = TransactionType.Income,
-    //             LastModified = DateTime.UtcNow,
-    //             AccountId = "3"
-    //         }
-    //     };
-    //}
 }

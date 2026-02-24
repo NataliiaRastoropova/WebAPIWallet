@@ -12,8 +12,8 @@ using WalletAPI.DataAccess;
 namespace WalletAPI.DataAccess.Migrations
 {
     [DbContext(typeof(WalletContext))]
-    [Migration("20260224151402_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260224205441_SeedAccountsAndTransactions")]
+    partial class SeedAccountsAndTransactions
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,6 +49,35 @@ namespace WalletAPI.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Account", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            Amount = 10m,
+                            BankType = 0,
+                            Currency = 0,
+                            LastModified = new DateTime(2025, 1, 2, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Type = 1
+                        },
+                        new
+                        {
+                            Id = "2",
+                            Amount = 20m,
+                            BankType = 0,
+                            Currency = 2,
+                            LastModified = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Type = 2
+                        },
+                        new
+                        {
+                            Id = "3",
+                            Amount = 30m,
+                            BankType = 0,
+                            Currency = 1,
+                            LastModified = new DateTime(2024, 6, 2, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Type = 3
+                        });
                 });
 
             modelBuilder.Entity("WalletAPI.DataAccess.Entities.TransactionEntity", b =>
@@ -75,6 +104,32 @@ namespace WalletAPI.DataAccess.Migrations
                     b.HasIndex("AccountId");
 
                     b.ToTable("Transaction", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "aaaaaaa1-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                            AccountId = "1",
+                            Amount = 1000m,
+                            LastModified = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Utc),
+                            TransactionType = 0
+                        },
+                        new
+                        {
+                            Id = "bbbbbbb2-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+                            AccountId = "2",
+                            Amount = 100m,
+                            LastModified = new DateTime(2024, 1, 3, 0, 0, 0, 0, DateTimeKind.Utc),
+                            TransactionType = 1
+                        },
+                        new
+                        {
+                            Id = "ccccccc3-cccc-cccc-cccc-cccccccccccc",
+                            AccountId = "3",
+                            Amount = 500m,
+                            LastModified = new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Utc),
+                            TransactionType = 0
+                        });
                 });
 
             modelBuilder.Entity("WalletAPI.DataAccess.Entities.TransactionEntity", b =>

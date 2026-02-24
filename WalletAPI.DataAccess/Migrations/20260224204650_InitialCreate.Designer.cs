@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using WalletAPI.DataAccess;
@@ -11,9 +12,11 @@ using WalletAPI.DataAccess;
 namespace WalletAPI.DataAccess.Migrations
 {
     [DbContext(typeof(WalletContext))]
-    partial class WalletContextModelSnapshot : ModelSnapshot
+    [Migration("20260224204650_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,7 +57,7 @@ namespace WalletAPI.DataAccess.Migrations
                             Amount = 10m,
                             BankType = 0,
                             Currency = 0,
-                            LastModified = new DateTime(2025, 1, 2, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2026, 2, 24, 20, 46, 50, 377, DateTimeKind.Utc).AddTicks(3770),
                             Type = 1
                         },
                         new
@@ -63,7 +66,7 @@ namespace WalletAPI.DataAccess.Migrations
                             Amount = 20m,
                             BankType = 0,
                             Currency = 2,
-                            LastModified = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2026, 2, 24, 20, 46, 50, 377, DateTimeKind.Utc).AddTicks(3910),
                             Type = 2
                         },
                         new
@@ -72,7 +75,7 @@ namespace WalletAPI.DataAccess.Migrations
                             Amount = 30m,
                             BankType = 0,
                             Currency = 1,
-                            LastModified = new DateTime(2024, 6, 2, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2026, 2, 24, 20, 46, 50, 377, DateTimeKind.Utc).AddTicks(3910),
                             Type = 3
                         });
                 });
@@ -105,26 +108,26 @@ namespace WalletAPI.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "aaaaaaa1-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+                            Id = "0977f770-8c4f-4879-8415-45df8fc1e59e",
                             AccountId = "1",
                             Amount = 1000m,
-                            LastModified = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2026, 2, 24, 20, 46, 50, 378, DateTimeKind.Utc).AddTicks(3080),
                             TransactionType = 0
                         },
                         new
                         {
-                            Id = "bbbbbbb2-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+                            Id = "81cdd47d-cc12-470c-8cd2-b52610d6ca4c",
                             AccountId = "2",
                             Amount = 100m,
-                            LastModified = new DateTime(2024, 1, 3, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2026, 2, 24, 20, 46, 50, 378, DateTimeKind.Utc).AddTicks(3370),
                             TransactionType = 1
                         },
                         new
                         {
-                            Id = "ccccccc3-cccc-cccc-cccc-cccccccccccc",
+                            Id = "de8282f3-a93b-4b80-85e1-b119d84291c3",
                             AccountId = "3",
                             Amount = 500m,
-                            LastModified = new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Utc),
+                            LastModified = new DateTime(2026, 2, 24, 20, 46, 50, 378, DateTimeKind.Utc).AddTicks(3370),
                             TransactionType = 0
                         });
                 });

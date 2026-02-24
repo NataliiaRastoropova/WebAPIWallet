@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fGZbNTdubX4=",
+  "dgSpecHash": "TBqRMigXJhw=",
   "success": true,
   "projectFilePath": "/Users/nataliiarastoropova/Projects/WalletAPI/WalletAPI/WalletAPI.csproj",
   "expectedPackageFiles": [
@@ -53,5 +53,16 @@
     "/Users/nataliiarastoropova/.nuget/packages/system.text.json/9.0.3/system.text.json.9.0.3.nupkg.sha512",
     "/Users/nataliiarastoropova/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Swashbuckle.AspNetCore.SwaggerUI' 6.2.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-qrmm-w75w-3wpx",
+      "libraryId": "Swashbuckle.AspNetCore.SwaggerUI",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }
