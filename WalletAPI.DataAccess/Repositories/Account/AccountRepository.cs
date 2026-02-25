@@ -35,6 +35,7 @@ public sealed class AccountRepository : IAccountRepository
         {
             if (e.Id == entity.Id)
             {
+                e.Name = entity.Name;
                 e.Amount = entity.Amount;
                 e.Currency = entity.Currency;
                 e.Type = entity.Type;

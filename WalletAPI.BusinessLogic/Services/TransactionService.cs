@@ -32,7 +32,6 @@ public class TransactionService : ITransactionService
     {
         var command = new GetTransactionsCommand(_transactionRepository);
         var transactions = await command.Execute();
-
         
       //  var transactions = await _transactionRepository.Get();
         if (transactions == null)
@@ -57,6 +56,17 @@ public class TransactionService : ITransactionService
     {
         var transactions = await _transactionRepository.Get(t 
             => t.LastModified.Date == DateTime.UtcNow.Date);
+        if (transactions == null)
+            return new List<Transaction>();
+        
+        return  transactions.Select(e => new Transaction(
+            e.Id, e.Amount, e.AccountId, e.TransactionType, e.LastModified)).ToList().AsReadOnly();
+    }
+    
+    public async Task<IReadOnlyList<Transaction>> GetTransactionsByAccount(string id)
+    {
+        var transactions = await _transactionRepository.Get(t 
+            => t.AccountId == id);
         if (transactions == null)
             return new List<Transaction>();
         

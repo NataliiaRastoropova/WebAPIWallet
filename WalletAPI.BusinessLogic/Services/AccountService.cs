@@ -31,6 +31,7 @@ public class AccountService : IAccountService
         
         return  accounts.Select(e => new Account(
             id: e.Id, 
+            name: e.Name,
             type: e.Type, 
             amount: e.Amount, 
             currency: e.Currency, 
@@ -46,6 +47,7 @@ public class AccountService : IAccountService
 
         return new Account(
             id: account.Id, 
+            name: account.Name,
             type: account.Type, 
             amount: account.Amount, 
             currency: account.Currency, 
@@ -61,6 +63,7 @@ public class AccountService : IAccountService
         await _accountRepository.Create(new AccountEntity
         {
             Id = account.Id,
+            Name = account.Name,
             Amount = account.Amount,
             Type = account.Type,
             Currency = account.Currency,
@@ -76,6 +79,7 @@ public class AccountService : IAccountService
         await _accountRepository.Update(new AccountEntity
             {
                 Id = account.Id,
+                Name = account.Name,
                 Amount = account.Amount,
                 Type = account.Type,
                 Currency = account.Currency,

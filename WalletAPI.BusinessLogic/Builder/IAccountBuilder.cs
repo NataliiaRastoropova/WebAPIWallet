@@ -9,6 +9,7 @@ namespace WalletAPI.BusinessLogic.Builder;
 public interface IAccountBuilder
 {
     IAccountBuilder SetId(string id);
+    IAccountBuilder SetName(string Name);
     IAccountBuilder SetBalance(decimal balance);
     IAccountBuilder SetType(AccountType name);
     IAccountBuilder SetCurrency(CurrencyType currency);

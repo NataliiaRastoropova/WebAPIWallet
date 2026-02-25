@@ -4,6 +4,7 @@ namespace WalletAPI.DataAccess.Entities;
 
 public class AccountEntity : BaseEntity
 {
+    public string Name { get; set; }
     public decimal Amount { get; set; }
     public AccountType Type { get; set; }
     public CurrencyType Currency { get; set; }

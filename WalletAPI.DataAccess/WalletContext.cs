@@ -19,6 +19,7 @@ public class WalletContext : DbContext
             new AccountEntity
                 {
                     Id = "1",
+                    Name = "admin",
                     Amount = 10,
                     Type = AccountType.Cash,
                     Currency = CurrencyType.USD,
@@ -28,6 +29,7 @@ public class WalletContext : DbContext
                 new AccountEntity
                 {
                     Id = "2",
+                    Name = "user1",
                     Amount = 20,
                     Type = AccountType.Debit,
                     Currency = CurrencyType.JPY,
@@ -37,6 +39,7 @@ public class WalletContext : DbContext
                 new AccountEntity
                 {
                     Id = "3",
+                    Name = "user2",
                     Amount = 30,
                     Type = AccountType.Credit,
                     Currency = CurrencyType.CAD,

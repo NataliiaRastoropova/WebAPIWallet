@@ -11,11 +11,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Models\TransactionModels" />
-      <Folder Include="Views\Transaction" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Content Remove="Views\Account\ичич.cshtml" />
     </ItemGroup>
 

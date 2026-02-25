@@ -7,6 +7,7 @@ namespace WalletAPI.BusinessLogic.Builder;
 public class AccountBuilder : IAccountBuilder
 {
     private string? _id;
+    private string? _name;
     private decimal _amount;
     private AccountType _type;
     private CurrencyType _currency;
@@ -19,6 +20,12 @@ public class AccountBuilder : IAccountBuilder
         return this;
     }
     
+    public IAccountBuilder SetName(string name)
+    {
+        _name = name;
+        return this;
+    }
+
     public IAccountBuilder SetBalance(decimal balance)
     {
         _amount = balance;
@@ -53,6 +60,7 @@ public class AccountBuilder : IAccountBuilder
     {
         return new Account(
             id: _id ?? Guid.NewGuid().ToString(),
+            name : _name,
             amount: _amount,
             type: _type,
             currency: _currency,

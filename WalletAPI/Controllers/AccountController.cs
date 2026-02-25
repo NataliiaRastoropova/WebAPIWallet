@@ -59,6 +59,7 @@ public class AccountController : ControllerBase
     public async Task<ActionResult> Add([FromBody] CreateAccountRequest request)
     {
         var entity = _builder
+            .SetName(request.Name)
             .SetBalance(request.Amount)
             .SetCurrency(request.Currency)
             .SetType(request.Type)
@@ -83,6 +84,7 @@ public class AccountController : ControllerBase
     {
         var entity = _builder
             .SetId(request.Id)
+            .SetName(request.Name)
             .SetBalance(request.Amount)
             .SetCurrency(request.Currency)
             .SetType(request.Type)

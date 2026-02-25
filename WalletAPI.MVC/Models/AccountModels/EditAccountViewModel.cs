@@ -5,10 +5,11 @@ namespace WalletAPI.MVC.Models.AccountModels;
 
 public class EditAccountViewModel
 {
-    [Required]
     public string Id { get; set; }
-
+    
     [Required]
+    public string Name { get; set; }
+    
     [Range(0, double.MaxValue)]
     public decimal Amount { get; set; }
 

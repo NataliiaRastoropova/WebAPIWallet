@@ -5,6 +5,7 @@ namespace WalletAPI.MVC.Models.AccountModels;
 public class AccountViewModel
 {
     public string Id { get; set; }
+    public string Name { get; set; }
 
     public decimal Amount { get; set; }
 

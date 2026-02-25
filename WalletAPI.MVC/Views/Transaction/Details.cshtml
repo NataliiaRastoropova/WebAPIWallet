@@ -1,0 +1,35 @@
+@model WalletAPI.MVC.Models.TransactionModels.TransactionViewModel
+
+@{
+    ViewData["Title"] = "Transaction Details";
+}
+
+<h2>Transaction Details</h2>
+
+<div class="card">
+    <div class="card-body">
+
+        <dl class="row">
+            <dt class="col-sm-3">Id</dt>
+            <dd class="col-sm-9">@Model.Id</dd>
+
+            <dt class="col-sm-3">Amount</dt>
+            <dd class="col-sm-9">@Model.Amount</dd>
+
+            <dt class="col-sm-3">Account</dt>
+            <dd class="col-sm-9">@Model.AccountId</dd>
+
+            <dt class="col-sm-3">Type</dt>
+            <dd class="col-sm-9">@Model.Type</dd>
+
+            <dt class="col-sm-3">LastModified</dt>
+            <dd class="col-sm-9">@Model.LastModified.ToString("yyyy-MM-dd HH:mm")</dd>
+        </dl>
+
+        <div class="mt-3">
+            <a asp-action="Index"
+               class="btn btn-secondary">Back to List</a>
+        </div>
+
+    </div>
+</div>

@@ -6,6 +6,9 @@ namespace WalletAPI.MVC.Models.AccountModels;
 public class CreateAccountViewModel
 {
     [Required]
+    public string Name { get; set; }
+    
+    [Required]
     [Range(0, double.MaxValue)]
     [Display(Name = "Balance")]
     public decimal Amount { get; set; }

@@ -7,10 +7,11 @@ namespace WalletAPI.BusinessLogic.Dtos;
 public sealed class Account : IEquatable<Account>
 {
     public static readonly Account Default
-        = new Account(string.Empty, Decimal.Zero, AccountType.None, 
+        = new Account(string.Empty, string.Empty, Decimal.Zero, AccountType.None, 
             CurrencyType.USD, DateTime.MinValue, Infrastructure.Enums.BankType.None);
 
     public string Id { get; }
+    public string Name { get; }
     public decimal Amount { get; private set; }
     public AccountType Type { get; }
     public CurrencyType Currency { get; }
@@ -18,10 +19,11 @@ public sealed class Account : IEquatable<Account>
     
     public BankType BankType { get; }
     
-    public Account(string id, decimal amount, AccountType type, 
+    public Account(string id, string name, decimal amount, AccountType type, 
         CurrencyType currency, DateTime lastModified, BankType bankType)
     {
         Id = id;
+        Name = name;
         Amount = amount;
         Type = type;
         Currency = currency;
@@ -37,14 +39,14 @@ public sealed class Account : IEquatable<Account>
         if (other == null)
             return false;
         
-        return Id == other.Id && Amount == other.Amount && Type == other.Type
+        return Id == other.Id && Name == other.Name && Amount == other.Amount && Type == other.Type
                 && Currency == other.Currency && LastModified == other.LastModified;
         
     }
 
     public override int GetHashCode()
     {
-        return (Id.GetHashCode() + Amount.GetHashCode() + Type.GetHashCode() + Currency.GetHashCode()
+        return (Id.GetHashCode() + Name.GetHashCode() + Amount.GetHashCode() + Type.GetHashCode() + Currency.GetHashCode()
             + LastModified.GetHashCode()) * 45;
     }
 }

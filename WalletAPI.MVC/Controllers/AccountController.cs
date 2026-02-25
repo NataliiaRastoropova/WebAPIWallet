@@ -43,6 +43,7 @@ public class AccountController : Controller
             var model = accounts.Select(a => new AccountViewModel()
             {
                 Id = a.Id,
+                Name = a.Name,
                 Amount = a.Amount,
                 Type = a.Type,
                 Currency = a.Currency,
@@ -71,6 +72,7 @@ public class AccountController : Controller
             var model = new AccountViewModel
             {
                 Id = account.Id,
+                Name = account.Name,
                 Amount = account.Amount,
                 Type = account.Type,
                 Currency = account.Currency,
@@ -102,6 +104,7 @@ public class AccountController : Controller
             return View(model);
 
         var entity = _builder
+            .SetName(model.Name)
             .SetBalance(model.Amount)
             .SetCurrency(model.Currency)
             .SetType(model.Type)
@@ -135,6 +138,7 @@ public class AccountController : Controller
         var model = new EditAccountViewModel
         {
             Id = account.Id,
+            Name = account.Name,
             Amount = account.Amount,
             Type = account.Type,
             Currency = account.Currency,
@@ -154,6 +158,7 @@ public class AccountController : Controller
 
         var entity = _builder
             .SetId(model.Id)
+            .SetName(model.Name)
             .SetBalance(model.Amount)
             .SetCurrency(model.Currency)
             .SetType(model.Type)

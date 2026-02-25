@@ -9,6 +9,8 @@ public class UpdateAccountRequest
     [Required]
     public string Id { get; init; }
     [Required]
+    public  string Name { get; init; }
+    [Required]
     public decimal Amount { get; init;}
     [Required]
     public AccountType Type { get; init;}
