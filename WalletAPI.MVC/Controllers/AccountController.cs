@@ -169,6 +169,7 @@ public class AccountController : Controller
         try
         {
             await _accountService.Update(entity);
+            TempData["Success"] = "Account created successfully";
             _logger.LogInformation($"Account {model.Id} updated");
 
             return RedirectToAction(nameof(Index));
@@ -191,11 +192,13 @@ public class AccountController : Controller
             await _accountService.Remove(id);
             _logger.LogInformation($"Account {id} successfully deleted");
 
+            TempData["Success"] = "Account deleted successfully";
             return RedirectToAction(nameof(Index));
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, $"Failed to delete account with id={id}");
+            TempData["Error"] = "Failed to delete account";
             return View("Error");
         }
     }

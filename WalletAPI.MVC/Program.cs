@@ -27,6 +27,17 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+// Змінити структуру URL зробити REST-подібні адреси:
+app.MapControllerRoute(
+    name: "accounts",
+    pattern: "accounts/{action=Index}/{id:int?}", //Додати constraint для id
+    defaults: new { controller = "Account" });
+
+app.MapControllerRoute(
+    name: "transactions",
+    pattern: "transactions/{action=Index}/{id?}",
+    defaults: new { controller = "Transaction" });
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
