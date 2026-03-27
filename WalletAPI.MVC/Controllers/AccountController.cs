@@ -169,7 +169,7 @@ public class AccountController : Controller
         try
         {
             await _accountService.Update(entity);
-            TempData["Success"] = "Account created successfully";
+            TempData["Success"] = "Account updated successfully";
             _logger.LogInformation($"Account {model.Id} updated");
 
             return RedirectToAction(nameof(Index));
